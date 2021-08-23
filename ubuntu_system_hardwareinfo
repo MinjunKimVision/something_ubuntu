@@ -1,0 +1,5 @@
+#특히 cpu와 프로세스에 대해 알려주는 어플리케이션이다.
+#명령어 한줄로출력 한번만출력 1번메뉴출력
+top -b -n1 1
+#대부분의 경우 cpu의 온도를 출력해주는데... 0번부터 뭘 뜻하는지는 의문이고 대부분 비슷한 온도대를 기록한다.
+cat /sys/devices/virtual/thermal/thermal_zone*/temp
