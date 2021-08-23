@@ -1,0 +1,16 @@
+#우선 xrdp를 설치하여야한다.
+sudo apt-get install xrdp
+#사용하는 Display Manager에 따라 다르지만 여기서는 gnome3인 ubuntu.desktop을 기준으로 한다
+#분명 아래의 그놈 세션은 깔려있다고 뜨지만 제대로 작동하지 않으며 인스톨을 해볼경우 무조건 다시 인스톨을 하더라...
+sudo apt-get installl gnome-session
+sudo apt-get install ubuntu-desktop
+
+
+#이제는 ini나 설정파일들을 수정해야하는데 ini는 같은 화면을 항상 땡겨쓰고 싶을 경우 포트번호를 맞춰주면된다. 
+#어떤 경우 ip를 수정하기도 한는데... 하드웨어에서 MSA하고 싶은 사람은 없겠지 결론적으로 /etx/xrdp/xrdp.ini는 바꿀 필요없다.
+# 하지만 /etc/xrdp/startwm.sh는 수정할 필요가 있다. 제일 아랫줄에 본인이 사용하는 DM에 대한 정보를 선언해줘야하며 난 아래를 사용한다.
+
+gnome-session session=ubuntu.desktop
+
+#색영역 등을 끄라고도 하지만 이는 윈도우의 Remote Display Protocol를 쓸 때 색영역을 24비트로 바꿔주면 되는 문제이다. 또한 최근에는 잘 발생하지 않는다는 것같다.
+#이걸 보는 당신에게 이 글덕에 여러번 고생하지말고 한번에 xrdp연결을 성공했으면 좋곘다.
